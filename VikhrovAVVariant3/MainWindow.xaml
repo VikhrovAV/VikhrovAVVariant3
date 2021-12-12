@@ -1,0 +1,29 @@
+﻿<Window x:Class="VikhrovAVVariant3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VikhrovAVVariant3"
+        mc:Ignorable="d"
+        Title="Попрыженок" Height="500" Width="800">
+    <Grid>
+        <Button x:Name="button" Content="Сортировка по алфавиту" HorizontalAlignment="Left" Margin="619,26,0,0" VerticalAlignment="Top" Width="146" Click="button_Click"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="50" Margin="10,10,0,0" VerticalAlignment="Top" Width="50" Source="Попрыженок.png"/>
+        <ListView x:Name="AgentList" HorizontalAlignment="Left" Height="320" Margin="26,82,0,0" VerticalAlignment="Top" Width="712">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn  Header="Наименование агента" Width="150" DisplayMemberBinding="{Binding name}"/>
+                    <GridViewColumn Header="Электронная почта" Width="150" DisplayMemberBinding="{Binding email}"/>
+                    <GridViewColumn Header="Телефон" Width="100" DisplayMemberBinding="{Binding number}"/>
+                    <GridViewColumn Header="Адрес" Width="100" DisplayMemberBinding="{Binding addres}"/>
+                    <GridViewColumn Header="ИНН" Width="100" DisplayMemberBinding="{Binding inn}"/>
+                    <GridViewColumn Header="КПП" Width="100" DisplayMemberBinding="{Binding kpp}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="button_Copy" Content="Очистка сортировки" HorizontalAlignment="Left" Margin="619,51,0,0" VerticalAlignment="Top" Width="146" Click="button_Click1"/>
+        <Button x:Name="button1" Content=">" HorizontalAlignment="Left" Margin="737,424,0,0" VerticalAlignment="Top" Width="28" Click="button1_Click"/>
+        <Button x:Name="button1_Copy" Content="&lt;" HorizontalAlignment="Left" Margin="698,424,0,0" VerticalAlignment="Top" Width="28" Click="button1_Copy_Click"/>
+
+    </Grid>
+</Window>
